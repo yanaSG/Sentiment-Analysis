@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid d-flex">
+    <div class="row">
+        <div class="col-4 text">
+            <form (ngSubmit)="analyzeText()" [formGroup]="textForm">
+                <h4 class="ms-3 mb-0 mt-3">Text</h4>
+
+                <textarea formControlName="text" id="text" placeholder="Enter your text here for analysis..."></textarea>
+                <div class="m-3 mt-0 mb-4" *ngIf="textForm.get('text')!.invalid && textForm.get('text')!.touched && textForm.get('text')!.value === ''">
+                    <small class="text-danger">Text is required for analysis!</small>
+                </div>
+                <div class="m-3 mt-0 mb-4" *ngIf="message">
+                    <small class="text-danger"><strong>{{ message }}</strong></small>
+                </div>
+
+                <div class="d-flex gap-3 ms-3">
+                    <app-button class="submit" type="submit" label="Analyze" [width]="120"></app-button>
+                    <app-button class="clear" type="reset" label="Clear All" [width]="120"></app-button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4 results d-flex flex-column gap-3">
+            <h4 class="mb-0 mt-3">Results</h4>
+            <div class="contain d-flex flex-column gap-3">
+                <h5 class="mb-0 mt-3" *ngIf="!results">No Results yet</h5>
+                <app-main-result *ngIf="results"></app-main-result>
+                <app-sentiment-ratio *ngIf="results"></app-sentiment-ratio>
+                <app-detected-scores-magnitudes class="mb-4" *ngIf="results"></app-detected-scores-magnitudes>    
+            </div>
+        </div>
+        <div class="col-3 logs d-flex flex-column gap-3">
+            <h4 class="mb-0 mt-3">Logs</h4>
+            <div class="container">
+                <app-log></app-log>
+                <app-log></app-log>
+            </div>
+        </div>
+    </div>
+</div>

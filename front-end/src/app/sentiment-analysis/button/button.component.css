@@ -1,0 +1,23 @@
+button {
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.submit {
+    background-color: #26515F;
+}
+
+.submit:hover {
+    background-color: #1D3C47;
+}
+
+.clear {
+    background-color: #7F7F7F;
+}
+
+.clear:hover {
+    background-color: #646464;
+}

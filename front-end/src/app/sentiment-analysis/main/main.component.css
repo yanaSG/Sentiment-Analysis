@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: calc(100% - 150px);
+    display: flex;
+}
+
+.row {
+    height: 100%;
+    flex: 1;
+}
+
+.text, .results, .logs {
+    height: 100%;
+    display: flex;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text h4 {
+    color: #1D3C47;
+    font-weight: 700;
+}
+
+textarea {
+    height: 250px;
+    width: 500px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.results h4 {
+    color: #1D3C47;
+    font-weight: 700;
+}
+
+.results h5 {
+    color: #1d3c478c;
+    font-weight: 700;
+}
+
+.results {
+    align-items: flex-start;
+}
+
+.results .contain {
+    overflow-y: scroll;
+    max-height: calc(100vh - 150px);
+}
+
+.logs h4 {
+    color: #1D3C47;
+    font-weight: 700;
+}
+
+.logs {
+    align-items: flex-start;
+}
+
+.logs .container {
+    background-color: #F8F9F9;
+    border-radius: 10px;
+    height: 500px;
+    overflow-y: scroll;
+}

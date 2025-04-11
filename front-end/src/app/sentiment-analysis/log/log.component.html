@@ -1,0 +1,7 @@
+<div class="container-fluid p-3 pb-1" *ngFor="let log of logs">
+    <p class="m-0 mb-1">{{ (log.text.length > 50) ? (log.text | slice:0:50) + '...' : log.text }}</p>
+    <p [class]="'sen ' + log.sentiment" ><strong>{{ log.sentiment }} | {{ log.score | number: '1.2-3' }}</strong></p>
+    <p class="mag">Magnitude : <strong>{{ log.magnitude | number: '1.2-3' }}</strong></p>
+    <p class="sub">Subjectivity : <strong>{{ log.subjectivity }}</strong></p>
+    <p class="cre">Created : {{ log.created_at | date:'MMMM d, y | h:mm a' }}</p>
+</div>

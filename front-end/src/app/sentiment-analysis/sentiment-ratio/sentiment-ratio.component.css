@@ -1,0 +1,14 @@
+.container-fluid {
+    background-color: #F8F9F9;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+.container {
+    height: 230px;
+}
+
+h6 {
+    color: #1D3C47;
+}

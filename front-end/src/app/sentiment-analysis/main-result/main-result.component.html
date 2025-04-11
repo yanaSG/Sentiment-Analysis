@@ -1,0 +1,20 @@
+<div class="container p-4 pb-2">
+    <div class="row">
+        <div class="col text-center">
+            <h4>{{ results.sentiment }}</h4>
+            <p>Sentiment</p>
+        </div>
+        <div class="col text-center">
+            <h4>{{ results.ratios_subjectivity.sentiment_score | number: '1.2-2' }}</h4>
+            <p>Score</p>
+        </div>
+        <div class="col text-center">
+            <h4>{{ results.ratios_subjectivity.magnitude | number: '1.2-2' }}</h4>
+            <p>Magnitude</p>
+        </div>
+        <div class="col text-center">
+            <h4>{{ results.ratios_subjectivity.subjectivity }}</h4>
+            <p>Subjectivity</p>
+        </div>
+    </div>
+</div>
